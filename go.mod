@@ -1,3 +1,3 @@
-module github.com/watch-service
+module watch-service
 
 go 1.26.1

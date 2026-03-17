@@ -9,11 +9,11 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/watch-service/internal/config"
-	"github.com/watch-service/internal/debouncer"
-	"github.com/watch-service/internal/logger"
-	"github.com/watch-service/internal/runner"
-	"github.com/watch-service/internal/watcher"
+	"watch-service/internal/config"
+	"watch-service/internal/debouncer"
+	"watch-service/internal/logger"
+	"watch-service/internal/runner"
+	"watch-service/internal/watcher"
 )
 
 func main() {
@@ -126,7 +126,7 @@ func findWatchConfig(eventPath string, watches []config.WatchConfig) *config.Wat
 				watchPath = abs
 			}
 		}
-		
+
 		if strings.HasPrefix(eventPath, watchPath) {
 			return &watches[i]
 		}

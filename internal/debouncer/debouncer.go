@@ -4,17 +4,17 @@ import (
 	"sync"
 	"time"
 
-	"github.com/watch-service/internal/watcher"
+	"watch-service/internal/watcher"
 )
 
 type BatchDebouncer struct {
-	mu       sync.Mutex
-	delay    time.Duration
-	timer    *time.Timer
-	events   []watcher.FileEvent
-	out      chan []watcher.FileEvent
-	done     chan struct{}
-	closed   bool
+	mu     sync.Mutex
+	delay  time.Duration
+	timer  *time.Timer
+	events []watcher.FileEvent
+	out    chan []watcher.FileEvent
+	done   chan struct{}
+	closed bool
 }
 
 func NewBatchDebounce(delay time.Duration) *BatchDebouncer {

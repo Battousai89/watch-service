@@ -6,19 +6,19 @@ delay = "500ms"
 max_parallel = 0
 
 # Конфигурация наблюдения 1: сжатие логов
-# [[watch]]
-# path = "/var/log"
-# recursive = true
-# command = "gzip"
-# args = ["-f", "{file}"]
-# timeout = "30s"
+[[watch]]
+path = "/var/log"
+recursive = true
+command = "gzip"
+args = ["-f", "{file}"]
+timeout = "30s"
 
 # Конфигурация наблюдения 2: уведомление об изменениях
-# [[watch]]
-# path = "C:\\Users\\AppData"
-# command = "notify-send"
-# args = ["Файл изменен: {file}"]
-# timeout = "10s"
+[[watch]]
+path = "C:\\Users\\AppData"
+command = "notify-send"
+args = ["Файл изменен: {file}"]
+timeout = "10s"
 
 # Конфигурация наблюдения 3: сборка проекта
 [[watch]]

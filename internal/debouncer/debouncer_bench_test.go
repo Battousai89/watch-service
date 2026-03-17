@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/watch-service/internal/watcher"
+	"watch-service/internal/watcher"
 )
 
 func BenchmarkBatchDebouncer(b *testing.B) {
